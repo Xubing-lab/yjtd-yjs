@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究团队 - Janus/微流控实验室</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #1a365d;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+      .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #63b3ed;
+        }
+
+        /* 下方内容区域：左右完全分隔 */
+        .content-wrapper {
+            display: flex;
+            margin-top: 2rem;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        /* 左侧栏：宽度由内容决定 */
+        .sidebar {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 2rem;
+            white-space: nowrap;
+        }
+
+        .sidebar h3 {
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar hr {
+            margin: 1rem 0;
+            border: none;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .sidebar a {
+            display: block;
+            margin-bottom: 1rem;
+            color: #1a365d;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a.active {
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        .sidebar a:not(.active):hover {
+            background-color: #f1f5f9;
+        }
+
+        /* 右侧内容区：剩余宽度全占 */
+        .main-content {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 2rem;
+        }
+              .main-content1 {
+            background: none;
+            box-shadow: none;
+            padding: 0;
+            text-align: center; /* ✅ 新增：让内容居中 */
+        }
+
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1rem;
+            border-radius: 6px;
+        }
+     /* 底部蓝色条 */
+        footer {
+            background-color: #1a365d;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-content p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="https://youke1.picui.cn/s1/2025/10/30/690360aa2319c.png" alt="Lab Logo">
+                <h1>仿生Janus/微流控实验室</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://xubing-lab.github.io/home/">网站首页</a></li>
+                    <li><a href="https://xubing-lab.github.io/sysjs/">实验室简介</a></li>
+                    <li><a href="https://xubing-lab.github.io/hjqk/">获奖情况</a></li>
+                    <li><a href="https://xubing-lab.github.io/yjtd-js/" style="color: #FFEC50; font-weight: bold;">研究团队</a></li>
+                    <li><a href="https://xubing-lab.github.io/kycg/">科研成果</a></li>
+                    <li><a href="https://xubing-lab.github.io/xmzl/">项目专利</a></li>
+              <li><a href="https://xubing-lab.github.io/rctj/">日常团建</a></li>  
+              </ul>
+            </nav>
+        </div>
+    </header>
+
+<div class="container content-wrapper" style="display: flex; gap: 2rem; align-items: flex-start;">
+
+    <!-- 左侧：教师照片墙 -->
+    <div class="main-content" style="flex: 1; background: none; box-shadow: none; padding: 0;">
+        <section id="teachers" style="background: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 2rem;">
+    <h2 style="color: #1a365d; margin-bottom: 1.5rem;">研究生</h2>
+
+    <!-- 照片墙：6行×5列 -->
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem;">
+        <!-- 照片1 -->
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a93525491.png" alt="学生1" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">詹童欢</p>
+        </div>
+        <!-- 照片2 -->
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a98403e44.png" alt="学生2" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">吴先昌</p>
+        </div>
+        <!-- 照片3 -->
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a984067f2.png" alt="学生3" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">黄衍阁</p>
+        </div>
+        <!-- 照片4 -->
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a9842a0c4.png" alt="学生4" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">王衡</p>
+        </div>
+        <!-- 照片5 -->
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a984335c3.png" alt="学生5" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">林洋</p>
+        </div>
+
+        <!-- 第二行 -->
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a9ec524e4.png" alt="学生6" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">黄宏杰</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a9ec4abfb.png" alt="学生7" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">张帅</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a9ec4b164.png" alt="学生8" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">吴锐</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a9ec33ff7.png" alt="学生9" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">张优超</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904aa03c6ac1.png" alt="学生10" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">郑子康</p>
+        </div>
+
+
+        <!-- 第三行 -->
+        <div style="text-align: center;">
+            <img src="https://youke1.picui.cn/s1/2025/10/31/6904a95d3b7ea.png" alt="学生16" style="width: 160px; height: 224px; border-radius: 6px; object-fit: cover;">
+            <p style="margin-top: 0.5rem; font-weight: bold;">闵书强</p>
+        </div>
+
+
+      
+    </div>
+</section>
+    </div>
+
+    <!-- 右侧：导航（改背景色） -->
+  <div class="main-content1">
+<div class="sidebar" style="background: #94ACB3; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 2rem; white-space: nowrap;">
+    <h3 style="color: #FFEC50; margin-bottom: 0.5rem;">研究团队</h3>
+    <hr style="margin: 1rem 0; border: none; border-top: 1px solid #FFEC50;">
+    <a href="https://xubing-lab.github.io/yjtd-js/"  style="display: block; margin-top: 1rem; color: #ffffff; font-weight: bold;">教师</a>
+    <a href="https://xubing-lab.github.io/yjtd-yjs/" style="color: #FFEC50; font-weight: bold;">研究生</a>
+    <a href="https://xubing-lab.github.io/yjtd-bks/"  style="display: block; margin-top: 1rem; color: #ffffff; font-weight: bold;">本科生</a>
+</div>
+</div>
+</div>
+ <!-- 底部蓝色条 -->
+    <footer>
+        <div class="container footer-content">
+            <p><strong>苏州科技大学  Janus/微流控实验室</strong></p>
+            <p>地址：苏州市滨河路298号   联系电话：18856923509</p>
+        </div>
+    </footer>
